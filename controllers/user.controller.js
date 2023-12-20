@@ -28,8 +28,6 @@ exports.getUsers = async (req, res) => {
     const users = await User.find();
 
     return res.status(200).json({
-      success: true,
-      message: "Users fetched",
       users,
     });
   } catch (error) {
